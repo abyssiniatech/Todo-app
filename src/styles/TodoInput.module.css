@@ -1,0 +1,71 @@
+/* Container for input + button */
+.form {
+  display: flex;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto 1rem auto;
+  overflow: hidden; /* ensures border radius works nicely */
+}
+
+/* Input field */
+.input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 2px solid #d1d5db; /* gray-300 */
+  border-right: none; /* remove right border to stick with button */
+  border-radius: 0.5rem 0 0 0.5rem; /* rounded only on left side */
+  outline: none;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+/* Input focus */
+.input:focus {
+  border-color: #6366f1; /* indigo-500 */
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+}
+
+/* Button */
+.button {
+  padding: 0 1.5rem;
+  font-size: 1rem;
+  background-color: #6366f1; /* indigo-500 */
+  color: white;
+  border: 2px solid #d1d5db; /* same border color */
+  border-left: none; /* remove left border to stick with input */
+  border-radius: 0 0.5rem 0.5rem 0; /* rounded only on right side */
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+/* Button hover */
+.button:hover {
+  background-color: #4f46e5; /* indigo-600 */
+  transform: scale(1.03);
+}
+
+/* Equal height for input and button */
+.input,
+.button {
+  height: 3rem;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 640px) {
+  .form {
+    flex-direction: column;
+  }
+
+  .input {
+    border-radius: 0.5rem;
+    border-right: 2px solid #d1d5db; /* restore right border */
+  }
+
+  .button {
+    border-radius: 0.5rem;
+    border-left: 2px solid #d1d5db; /* restore left border */
+    width: 100%;
+    margin-top: 0.25rem;
+  }
+}

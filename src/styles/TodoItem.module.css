@@ -1,0 +1,23 @@
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+ gap: 10px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.checkbox {
+  margin-right: 1rem;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #9ca3af;
+}
+
+.delete {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
